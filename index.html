@@ -35,7 +35,7 @@
           <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" />
         </svg>
       </button>
-      <a href="#" class="nav-cv">Download CV ↓</a>
+      <!-- <a href="#" class="nav-cv">Download CV ↓</a> -->
       <button id="burger" aria-label="Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
           <path d="M4 7h16M4 17h16" />
@@ -430,15 +430,15 @@
         <form class="cform rv d1" id="cform">
           <div class="cfield">
             <label for="cf-name">Your name</label>
-            <input id="cf-name" type="text" placeholder="Jane Doe" required>
+            <input id="cf-name" name="name" type="text" placeholder="Jane Doe" required>
           </div>
           <div class="cfield">
             <label for="cf-email">Email address</label>
-            <input id="cf-email" type="email" placeholder="jane@company.com" required>
+            <input id="cf-email" name="email" type="email" placeholder="jane@company.com" required>
           </div>
           <div class="cfield">
             <label for="cf-msg">Project details</label>
-            <textarea id="cf-msg" placeholder="Tell me about what you're building…"></textarea>
+            <textarea id="cf-msg" name="message" placeholder="Tell me about what you're building…"></textarea>
           </div>
           <button type="submit" class="btn btn-fill">Send Message
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
@@ -456,19 +456,20 @@
       <div class="foot-logo"><span class="dot"></span>Rodrigo Matos</div>
       <div class="foot-copy">© 2026 Rodrigo Matos — Senior Mobile Engineer</div>
       <div class="foot-links">
-        <a href="https://www.linkedin.com/in/rodrigo-matos-057aa167/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/rodrigomatosc" target="_blank" rel="noopener">GitHub</a><a
+        <a href="https://www.linkedin.com/in/rodrigo-matos-057aa167/" target="_blank" rel="noopener">LinkedIn</a><a
+          href="https://github.com/rodrigomatosc" target="_blank" rel="noopener">GitHub</a><a
           href="mailto:rodrigo.matos@morphotech.com">Email</a>
       </div>
     </div>
   </footer>
 
   <!-- hero direction switcher -->
-  <div class="hero-switch" id="heroSwitch">
+  <!-- <div class="hero-switch" id="heroSwitch">
     <span class="lbl">Hero style</span>
     <button data-h="a" class="active">Split</button>
     <button data-h="b">Editorial</button>
     <button data-h="c">Portrait</button>
-  </div>
+  </div> -->
 
   <!-- mount point for Tweaks panel -->
   <div id="tweaks-root"></div>
