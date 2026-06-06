@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="duo" data-hero="a" data-font="grotesk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodrigo Matos — Senior Mobile Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+  <!-- ════════ NAV ════════ -->
+  <nav id="nav">
+    <a href="#hero" class="logo"><span class="dot"></span>Rodrigo Matos</a>
+    <div class="nav-mid">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+        </svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" />
+        </svg>
+      </button>
+      <a href="#" class="nav-cv">Download CV ↓</a>
+      <button id="burger" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M4 7h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="drawer" id="drawer">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#">Download CV ↓</a>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <section id="hero" data-screen-label="Hero">
+    <div class="bg-orbs">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+    </div>
+    <div class="grid-veil"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="status-pill rv"><span class="pulse"></span>Available for new opportunities</span>
+        <p class="eyebrow rv d1" style="margin-top:22px">// senior_mobile_engineer</p>
+        <h1 class="hero-name rv d1">Rodrigo<br><span class="ln2">Matos</span></h1>
+        <div class="hero-role rv d2">10+ Years · Mobile Engineering</div>
+        <p class="hero-desc rv d3">High-performance, accessible, scalable mobile experiences with React Native &amp;
+          native Android and IOS a decade turning complex problems into elegant, ship-ready apps.</p>
+        <div class="hero-cta rv d4">
+          <a href="#projects" class="btn btn-fill">View Work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-stats rv d4">
+          <div class="s">
+            <div class="v" data-count="10" data-suffix="+">0</div>
+            <div class="l">Years exp.</div>
+          </div>
+          <div class="s">
+            <div class="v" data-count="20" data-suffix="+">0</div>
+            <div class="l">Apps shipped</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-wrap rv d2">
+        <div class="photo-blob"></div>
+        <div class="photo-card"><img src="assets/rodrigo.png" alt="Rodrigo Matos"></div>
+
+        <div class="float-badge fb-1">
+          <span class="ic">⚛</span>
+          <span><small>Core stack</small><b>React Native</b></span>
+        </div>
+        <div class="float-badge fb-2">
+          <span class="ic">▲</span>
+          <span><small>Native</small><b>Android · IOS</b></span>
+        </div>
+        <div class="float-badge fb-3">
+          <span class="ic">★</span>
+          <span><small>Based in</small><b>Portugal</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ MARQUEE ════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="mqTrack"></div>
+  </div>
+
+  <!-- ════════ ABOUT ════════ -->
+  <section id="about" data-screen-label="About">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">// about</p>
+        <h2 class="sec-title">Get to <em>know me</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="rv d1">
+          <p class="about-lead">I build mobile apps that <em>millions of people</em> rely on every day, fast,
+            accessible, and built to last.</p>
+          <p class="about-body">A Senior Mobile Engineer with 10+ years of experience, I specialize in React Native and
+            native Android, with full-stack roots in Java &amp; Spring Boot. I've shipped news, media, and education
+            products for some of Portugal's largest publishers, owning everything from clean architecture and CI/CD
+            pipelines to pixel-level UI and real-time audio/video streaming. I care about performance profiling,
+            crash-free sessions, and interfaces that simply feel right.</p>
+        </div>
+        <div class="rv d2">
+          <div class="facts">
+            <div class="fact"><span class="k">Location</span><span class="vv">Portugal</span></div>
+            <div class="fact"><span class="k">Experience</span><span class="vv acc">10+ years</span></div>
+            <div class="fact"><span class="k">Focus</span><span class="vv">React Native · Android</span></div>
+            <div class="fact"><span class="k">Status</span><span class="vv acc">Available</span></div>
+          </div>
+          <div class="edu-mini">
+            <div class="edu-row">
+              <span class="badge">MBA</span>
+              <div>
+                <div class="d">Software Engineering</div>
+                <div class="m">IGTI — 2021</div>
+              </div>
+            </div>
+            <div class="edu-row">
+              <span class="badge">BSc</span>
+              <div>
+                <div class="d">Information Systems</div>
+                <div class="m">Uniceuma — 2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ EXPERIENCE ════════ -->
+  <section id="experience" data-screen-label="Experience">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">// experience</p>
+        <h2 class="sec-title">Professional <em>journey</em></h2>
+        <p class="sec-sub">From full-stack foundations to specializing in high-end mobile ecosystems.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="tl rv">
+          <div class="tl-when"><span class="now">2025 — Present</span></div>
+          <div class="tl-rail">
+            <div class="dot"></div>
+            <div class="ln"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-role">Mobile Engineer</div>
+            <div class="tl-co">Morphotech</div>
+            <ul class="tl-list">
+              <li>Building high-performance React Native applications on a clean, testable architecture.</li>
+              <li>Leading UI/UX implementation and cross-platform consistency.</li>
+              <li>Optimizing mobile build pipelines and CI/CD throughput.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl rv d1">
+          <div class="tl-when">2019 — 2025</div>
+          <div class="tl-rail">
+            <div class="dot"></div>
+            <div class="ln"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-role">Mobile Developer</div>
+            <div class="tl-co">Impresa</div>
+            <ul class="tl-list">
+              <li>Maintained core news-delivery apps for major Portuguese media outlets.</li>
+              <li>Integrated real-time audio &amp; video streaming features.</li>
+              <li>Raised store ratings through performance profiling and crash fixes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl rv d2">
+          <div class="tl-when">2013 — 2019</div>
+          <div class="tl-rail">
+            <div class="dot"></div>
+            <div class="ln"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-role">Full-stack Developer</div>
+            <div class="tl-co">IT Happens LTDA</div>
+            <ul class="tl-list">
+              <li>Full-cycle development with Java, Spring Boot, and React.</li>
+              <li>Designed and shipped RESTful APIs for mobile consumption.</li>
+              <li>Database modeling and optimization for enterprise scale.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PROJECTS ════════ -->
+  <section id="projects" data-screen-label="Projects">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">// selected work</p>
+        <h2 class="sec-title">Some of the <em>apps</em> I've shipped</h2>
+        <p class="sec-sub">Real products on the App Store and Google Play, used across Portugal.</p>
+      </div>
+
+      <div class="proj-grid">
+
+        <!-- 01 Expresso (featured) -->
+        <article class="proj rv">
+          <div class="proj-media" style="--c1:#1c2433;--c2:#0e1320">
+            <image-slot id="proj-expresso" shape="rect" placeholder="Expresso screenshot"
+              src="assets/expresso.png"></image-slot>
+          </div>
+          <div class="proj-info">
+            <span class="proj-num">01 / EXPRESSO</span>
+            <h3 class="proj-name">Expresso</h3>
+            <p class="proj-desc">Portugal's leading premium newspaper. Complex typography, offline-first reading, and an
+              integrated podcast player engineered for a demanding daily audience.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Android SDK</span><span class="proj-tag">Kotlin</span>
+              <span class="proj-tag">Audio Engine</span><span class="proj-tag">Offline-first</span>
+            </div>
+            <div class="store-row">
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://apps.apple.com/pt/app/expresso/id416836970">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16.4 12.6c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.4-2 .7-1 1-2 1-2.1-.1 0-2.3-.9-2.4-3.6zM14.6 6.6c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.4 1.2-.5.6-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1z" />
+                </svg>
+                <span class="st"><small>App Store</small><b>iOS</b></span></a>
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://play.google.com/store/search?q=Expresso%20jornal&c=apps">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 3.2 13.5 12 4 20.8c-.3-.2-.5-.6-.5-1V4.2c0-.4.2-.8.5-1zM15 13.5l2.6 2.4-9 5.1 6.4-7.5zM18.8 11.2c.5.3.7.8.7 1.3s-.3 1-.7 1.3l-2.2 1.2-2.7-2.5 2.7-2.5 2.2 1.2zM8.6 3.4l9 5.1L15 10.9 8.6 3.4z" />
+                </svg>
+                <span class="st"><small>Google Play</small><b>Android</b></span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 SIC Notícias -->
+        <article class="proj rv d1">
+          <div class="proj-media" style="--c1:#33211c;--c2:#1a120e">
+            <image-slot id="proj-sic" shape="rect" placeholder="SIC Notícias screenshot"
+              src="assets/sic.jpeg"></image-slot>
+          </div>
+          <div class="proj-info">
+            <span class="proj-num">02 / SIC NOTÍCIAS</span>
+            <h3 class="proj-name">SIC Notícias</h3>
+            <p class="proj-desc">A high-traffic news app delivering real-time journalism live video integration,
+              breaking-news alerts, and a custom media player for seamless streaming.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Native</span><span class="proj-tag">Video Core</span><span
+                class="proj-tag">Real-time</span>
+            </div>
+            <div class="store-row">
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://apps.apple.com/pt/app/sic-not%C3%ADcias/id1478878799">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16.4 12.6c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.4-2 .7-1 1-2 1-2.1-.1 0-2.3-.9-2.4-3.6zM14.6 6.6c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.4 1.2-.5.6-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1z" />
+                </svg>
+                <span class="st"><small>App Store</small><b>iOS</b></span></a>
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://play.google.com/store/search?q=SIC%20Not%C3%ADcias&c=apps">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 3.2 13.5 12 4 20.8c-.3-.2-.5-.6-.5-1V4.2c0-.4.2-.8.5-1zM15 13.5l2.6 2.4-9 5.1 6.4-7.5zM18.8 11.2c.5.3.7.8.7 1.3s-.3 1-.7 1.3l-2.2 1.2-2.7-2.5 2.7-2.5 2.2 1.2zM8.6 3.4l9 5.1L15 10.9 8.6 3.4z" />
+                </svg>
+                <span class="st"><small>Google Play</small><b>Android</b></span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Idiomus -->
+        <article class="proj rv d2">
+          <div class="proj-media" style="--c1:#1c3329;--c2:#0e1a14">
+            <image-slot id="proj-idiomus" shape="rect" placeholder="Idiomus screenshot"
+              src="assets/idiomus.webp"></image-slot>
+          </div>
+          <div class="proj-info">
+            <span class="proj-num">03 / IDIOMUS</span>
+            <h3 class="proj-name">Idiomus</h3>
+            <p class="proj-desc">Learn English through audio &amp; text. I built the core playback logic, content
+              synchronization, and the subscription management system from the ground up.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React Native</span><span class="proj-tag">Node.js</span>
+              <span class="proj-tag">Audio Sync</span>
+            </div>
+            <div class="store-row">
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://apps.apple.com/pt/app/idiomus-textos-em-ingl%C3%AAs/id1362353575">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16.4 12.6c0-2 1.6-3 1.7-3.1-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.4-2 .7-1 1-2 1-2.1-.1 0-2.3-.9-2.4-3.6zM14.6 6.6c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.4 1.2-.5.6-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1z" />
+                </svg>
+                <span class="st"><small>App Store</small><b>iOS</b></span></a>
+              <a class="store-btn" target="_blank" rel="noopener"
+                href="https://play.google.com/store/search?q=Idiomus&c=apps">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 3.2 13.5 12 4 20.8c-.3-.2-.5-.6-.5-1V4.2c0-.4.2-.8.5-1zM15 13.5l2.6 2.4-9 5.1 6.4-7.5zM18.8 11.2c.5.3.7.8.7 1.3s-.3 1-.7 1.3l-2.2 1.2-2.7-2.5 2.7-2.5 2.2 1.2zM8.6 3.4l9 5.1L15 10.9 8.6 3.4z" />
+                </svg>
+                <span class="st"><small>Google Play</small><b>Android</b></span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SKILLS ════════ -->
+  <section id="skills" data-screen-label="Skills">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">// skills</p>
+        <h2 class="sec-title">Technical <em>expertise</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col rv">
+          <div class="kicker"><span class="n">01</span>Mobile</div>
+          <h3>Cross-platform &amp; native</h3>
+          <ul>
+            <li>React Native<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i></span></li>
+            <li>Android<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i></span></li>
+            <li>Kotlin<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Java<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Swift (iOS)<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+            </li>
+          </ul>
+        </div>
+        <div class="skill-col rv d1">
+          <div class="kicker"><span class="n">02</span>Backend</div>
+          <h3>APIs &amp; infrastructure</h3>
+          <ul>
+            <li>Spring Boot<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Node.js<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Firebase<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Docker<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          </ul>
+        </div>
+        <div class="skill-col rv d2">
+          <div class="kicker"><span class="n">03</span>Practices</div>
+          <h3>How I work</h3>
+          <ul>
+            <li>Clean Architecture<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i class="on"></i></span></li>
+            <li>CI/CD<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>TDD<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+            <li>Performance Profiling<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i class="on"></i></span></li>
+            <li>GitHub Actions<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                  class="on"></i><i></i></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact" data-screen-label="Contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="rv">
+          <p class="eyebrow">// contact</p>
+          <h2 class="contact-cta" style="margin-top:16px">Let's build something <em>exceptional.</em></h2>
+          <p class="contact-body">Looking for a senior mobile engineer, have a question, or just want to connect? Reach
+            out. I'm always happy to talk architecture, React Native performance, or your next product.</p>
+          <div class="contact-links">
+            <a href="mailto:rodrigo.matos.dev@gmail.com" class="clink">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                  <path d="m3.5 6.5 8.5 6 8.5-6" />
+                </svg></span>
+              rodrigo.matos.dev@gmail.com</a>
+            <a href="https://www.linkedin.com/in/rodrigo-matos-057aa167/" class="clink" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z" />
+                </svg></span>
+              linkedin.com/in/rodrigo-matos-057aa167</a>
+            <a href="https://github.com/rodrigomatosc" class="clink" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.300-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.8v2.7c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+                </svg></span>
+              github.com/rodrigomatosc</a>
+          </div>
+        </div>
+
+        <form class="cform rv d1" id="cform">
+          <div class="cfield">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" type="text" placeholder="Jane Doe" required>
+          </div>
+          <div class="cfield">
+            <label for="cf-email">Email address</label>
+            <input id="cf-email" type="email" placeholder="jane@company.com" required>
+          </div>
+          <div class="cfield">
+            <label for="cf-msg">Project details</label>
+            <textarea id="cf-msg" placeholder="Tell me about what you're building…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill">Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></button>
+          <div class="sent">✓ Thanks — I'll get back to you shortly.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-logo"><span class="dot"></span>Rodrigo Matos</div>
+      <div class="foot-copy">© 2026 Rodrigo Matos — Senior Mobile Engineer</div>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/rodrigo-matos-057aa167/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/rodrigomatosc" target="_blank" rel="noopener">GitHub</a><a
+          href="mailto:rodrigo.matos@morphotech.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- hero direction switcher -->
+  <div class="hero-switch" id="heroSwitch">
+    <span class="lbl">Hero style</span>
+    <button data-h="a" class="active">Split</button>
+    <button data-h="b">Editorial</button>
+    <button data-h="c">Portrait</button>
+  </div>
+
+  <!-- mount point for Tweaks panel -->
+  <div id="tweaks-root"></div>
+
+  <!-- standalone-bundle splash / no-JS fallback -->
+  <template id="__bundler_thumbnail" data-bg-color="#0A0B0F">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#0A0B0F" />
+      <circle cx="600" cy="300" r="220" fill="none" stroke="#14161D" stroke-width="2" />
+      <circle cx="470" cy="300" r="220" fill="#F6953E" opacity="0.16" />
+      <circle cx="730" cy="300" r="220" fill="#5AA6F2" opacity="0.16" />
+      <text x="600" y="345" font-family="'Space Grotesk',sans-serif" font-size="150" font-weight="600" fill="#EDEAE4"
+        text-anchor="middle">R<tspan fill="#F6953E">.</tspan>M</text>
+      <text x="600" y="540" font-family="'JetBrains Mono',monospace" font-size="30" letter-spacing="8" fill="#9DA0AC"
+        text-anchor="middle">RODRIGO MATOS</text>
+      <text x="600" y="590" font-family="'JetBrains Mono',monospace" font-size="20" letter-spacing="6" fill="#5E626F"
+        text-anchor="middle">SENIOR MOBILE ENGINEER</text>
+    </svg>
+  </template>
+
+  <script src="image-slot.js"></script>
+  <script src="portfolio.js"></script>
+
+  <!-- Tweaks (React island that drives the vanilla document) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+
+</html>
